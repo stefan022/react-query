@@ -1,1 +1,1 @@
-export const baseURL = "https://fakestoreapi.com";
+export const baseURL = "https://react-query.p.rapidapi.com";
