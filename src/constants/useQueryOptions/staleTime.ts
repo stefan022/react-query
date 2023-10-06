@@ -1,0 +1,1 @@
+export const staleTime = 60 * 1000;
