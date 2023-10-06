@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { ISingleProduct } from '../../ts/interface/ISingleProduct';
+import { IProduct } from '../../ts/interface/IProduct';
 import SingleProduct from './SingleProduct/SingleProduct';
 
 interface IProps {
-    products: ISingleProduct[];
+    products: IProduct[];
 }
 
 const Products: FC<IProps> = ({ products }): JSX.Element => {
@@ -14,7 +14,7 @@ const Products: FC<IProps> = ({ products }): JSX.Element => {
             <>
                 <h1>Products Info</h1>
                 {
-                    products.map((product: ISingleProduct) => {
+                    products.map((product: IProduct) => {
                         const { id, title, price, description, category } = product;
                         return (
                             <SingleProduct
