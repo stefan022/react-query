@@ -10,7 +10,7 @@ const Products: FC<IProps> = ({ products }): JSX.Element => {
     return (
         <>
         {
-            products.length > 0 ? (
+            products.length > 0 && (
             <>
                 <h1>Products Info</h1>
                 {
@@ -29,7 +29,7 @@ const Products: FC<IProps> = ({ products }): JSX.Element => {
                     })
                 }
             </>
-            ) : <p>Loading...</p>
+            )
         }
         </>
     )
