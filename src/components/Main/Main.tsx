@@ -5,7 +5,7 @@ import { Products, Error } from "../../components"
 import { IProduct } from "../../ts/interface/IProduct"
 
 const Main: FC = (): JSX.Element => {
-    const { data: products, status, error } = useQuery<IProduct[], Error>(["products"], fetchData, { initialData: [] });
+    const { data: products, status, error } = useQuery<IProduct[], Error>(["products"], fetchData, { initialData: [], retry: 3 });
 
     if (status === "error") return <Error message={error.message} />
 
